@@ -1,0 +1,111 @@
+{
+  "disclaimer": "Nutrient-content and cost figures below are reference data, not a per-crop dosing recommendation -- this app does not have real, sourced N-P-K requirement figures for its 126-crop catalog, and inventing per-crop doses would be exactly the kind of fabrication this project avoids. Use these numbers to compare organic vs chemical options and estimate cost for a dose you already know (from your Krishi Gyan Kendra or package instructions), not as an automatic prescription. Chemical fertilizer prices are subsidized government rates and may be outdated (see each entry's sources); organic input NPK ranges are general agricultural-science figures, not Nepal-specific soil-test data, since actual manure/compost nutrient content varies a lot by what went into it.",
+  "inputs": [
+    {
+      "id": "urea",
+      "name": "Urea",
+      "type": "chemical",
+      "nutrientContent": { "nPercent": 46, "p2o5Percent": 0, "k2oPercent": 0 },
+      "costPerKg": 25,
+      "notes": [
+        "The cheapest, most concentrated nitrogen source available -- almost pure nitrogen fertilizer, no phosphorus or potassium",
+        "Subsidized government price; the pre-2023 rate was NPR 14/kg, so the real farm-gate price may have moved again since 2023"
+      ],
+      "sources": [
+        "N content: 46% -- standard chemical composition of urea (CH4N2O), a fixed chemical fact, not a Nepal-specific figure",
+        "Price: NPR 25/kg -- Nepal government subsidized retail rate as of March 2023, per Kathmandu Post reporting on the 2023 fertilizer price revision (up from a prior NPR 14/kg). No more current (2025/26) official rate was found despite searching; treat this as potentially outdated"
+      ]
+    },
+    {
+      "id": "dap",
+      "name": "DAP (Di-Ammonium Phosphate)",
+      "type": "chemical",
+      "nutrientContent": { "nPercent": 18, "p2o5Percent": 46, "k2oPercent": 0 },
+      "costPerKg": 50,
+      "notes": [
+        "The standard phosphorus source for Nepali farmers, with a meaningful nitrogen contribution too",
+        "Usually applied at planting/land-prep, since phosphorus needs to be near the root zone early"
+      ],
+      "sources": [
+        "N-P2O5-K2O content: 18-46-0 -- standard chemical composition of di-ammonium phosphate, a fixed chemical fact",
+        "Price: NPR 50/kg -- Nepal government subsidized retail rate as of March 2023 (up from a prior NPR 43/kg), per Kathmandu Post reporting. Same outdated-price caveat as urea above"
+      ]
+    },
+    {
+      "id": "mop",
+      "name": "MOP / Potash (Muriate of Potash)",
+      "type": "chemical",
+      "nutrientContent": { "nPercent": 0, "p2o5Percent": 0, "k2oPercent": 60 },
+      "costPerKg": 40,
+      "notes": [
+        "The standard potassium source -- Nepal imports nearly all of it, so price/availability can be less stable than urea/DAP",
+        "Potassium supports disease resistance and fruit/tuber quality more than raw vegetative growth"
+      ],
+      "sources": [
+        "K2O content: 60% -- standard chemical composition of muriate of potash (potassium chloride), a fixed chemical fact",
+        "Price: NPR 40/kg -- Nepal government subsidized retail rate as of March 2023 (up from a prior NPR 31/kg), per Kathmandu Post reporting. Same outdated-price caveat as urea above"
+      ]
+    },
+    {
+      "id": "farmyard_manure",
+      "name": "Farmyard Manure (FYM)",
+      "type": "organic",
+      "nutrientContent": { "nPercent": 0.75, "p2o5Percent": 0.5, "k2oPercent": 0.8 },
+      "costPerKg": null,
+      "notes": [
+        "Nutrient content shown is a rough midpoint of a wide real range (0.4-1.5% N, 0.3-0.9% P2O5, 0.3-1.9% K2O) -- actual content depends heavily on the animal, bedding, and how well-rotted it is, so treat this as a starting estimate, not a lab result",
+        "No reliable Nepal market price found -- almost always farmer-produced on-farm from their own livestock rather than purchased, so costPerKg is left unset rather than guessed",
+        "Bulkier and slower-release than chemical fertilizer, but improves soil structure/water retention in a way urea/DAP/MOP don't"
+      ],
+      "sources": [
+        "Nutrient range: 0.4-1.5% N, 0.3-0.9% P2O5, 0.3-1.9% K2O for well-rotted farmyard manure -- general agricultural-science reference (allotment-garden.org compiled figures, cross-referenced against a ResearchGate agronomy discussion). Not Nepal-specific; real content varies too much by production system for one exact number to be honest"
+      ]
+    },
+    {
+      "id": "compost",
+      "name": "Compost",
+      "type": "organic",
+      "nutrientContent": { "nPercent": 1.1, "p2o5Percent": 0.19, "k2oPercent": 0.6 },
+      "costPerKg": 26,
+      "notes": [
+        "Nutrient content is the median of a large multi-sample dataset (ranges are wide: N 0.02-5%, P 0.06-3.4%, K 0.07-4%+) -- like FYM, treat as a starting estimate, not a guarantee",
+        "The one Nepal price point found (government procurement contract price) may not reflect what an individual farmer pays or receives locally"
+      ],
+      "sources": [
+        "Nutrient content: median 1.1% N, 0.19% P, 0.6% K across a large compost-sample dataset -- scienceinsights.org compilation of compost nutrient studies. Not Nepal-specific",
+        "Price: NPR 26/kg -- price a supplier won a bid at to supply organic manure/compost to the Nepal government under the Prime Minister Agriculture Modernisation Project, per Kathmandu Post reporting. A single government-contract data point, not a general market average -- treat as approximate"
+      ]
+    },
+    {
+      "id": "vermicompost",
+      "name": "Vermicompost",
+      "type": "organic",
+      "nutrientContent": { "nPercent": 2.5, "p2o5Percent": 1.9, "k2oPercent": 2.05 },
+      "costPerKg": 25,
+      "notes": [
+        "By far the most nutrient-dense organic option here -- roughly 2-3x the N-P-K of compost, close to a diluted chemical fertilizer in nitrogen terms",
+        "The only organic input in this file with a real Nepal-specific farm-level economics study behind its price"
+      ],
+      "sources": [
+        "Nutrient content: 2-3% N, 1.55-2.25% P, 1.85-2.25% K (midpoints used: 2.5/1.9/2.05) -- general agricultural-science reference (allotment-garden.org compiled figures). Not Nepal-specific",
+        "Price: NPR 25-26/kg retail (production cost NPR 15.68/kg, ~NPR 9/kg at wholesale/ton scale) -- 'Economics of Production and Marketing of Vermicompost in Chitwan, Nepal' (academic study, Chitwan district). The most directly Nepal-sourced price figure in this file"
+      ]
+    },
+    {
+      "id": "biogas_slurry",
+      "name": "Biogas Slurry (bio-slurry)",
+      "type": "organic",
+      "nutrientContent": { "nPercent": 2.13, "p2o5Percent": 0.98, "k2oPercent": 0.38 },
+      "costPerKg": null,
+      "notes": [
+        "Extremely widely used in Nepal specifically -- over 94% of Nepali households with a biogas plant reportedly use the slurry byproduct on their fields rather than buying chemical fertilizer",
+        "Reported to cut chemical fertilizer need by roughly 30-40% and to have raised maize yields 15-23% in field use -- genuinely Nepal-relevant impact figures, even though the exact N-P-K% below comes from an Indian study on comparable cattle-dung biogas slurry, not a Nepal lab test",
+        "Free byproduct of a biogas digester, not something bought/sold by the kg, so costPerKg is left unset rather than guessed"
+      ],
+      "sources": [
+        "Nutrient content: 2.13% N, 0.98% P, 0.38% K (average across 3 sites) -- Frontiers in Sustainable Food Systems, 'Temporal characterization of biogas slurry: a pre-requisite for sustainable nutrigation in crop production' (2023). This is an Indian study (IARI and two Indian field sites); used here as the best available figure for cattle-dung-fed biogas slurry, which is chemically comparable regardless of country, but it is not a Nepal-specific measurement",
+        "Nepal usage/impact figures (94% adoption among biogas households, 30-40% chemical fertilizer reduction, 15-23% maize yield increase): compiled from Nepal-focused biogas/bio-slurry reporting (myclimate.org Nepal biogas program page; CCAC Bioslurry Management guidelines)"
+      ]
+    }
+  ]
+}

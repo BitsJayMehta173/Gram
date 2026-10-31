@@ -1,0 +1,114 @@
+{
+  "rows": 77920,
+  "train_rows": 58440,
+  "test_rows": 19480,
+  "target_stats": {
+    "min": -240800.0,
+    "max": 11215520.0,
+    "mean": 386980.6189040041
+  },
+  "linear_regression": {
+    "r2": 0.3138275457313734,
+    "mae": 304052.83633443445,
+    "rmse": 618383.5403151494
+  },
+  "random_forest": {
+    "r2": 0.9999812737736244,
+    "mae": 114.0039271047226,
+    "rmse": 3230.475234721948
+  },
+  "driver_importance_sum": 0.9810405044104299,
+  "control_importance_sum": 0.018959495589570136,
+  "feature_importances_grouped": [
+    {
+      "feature": "enterprise_id",
+      "importance": 0.2977520256457611,
+      "tag": "driver"
+    },
+    {
+      "feature": "area_acre",
+      "importance": 0.2858806794577911,
+      "tag": "driver"
+    },
+    {
+      "feature": "price_max",
+      "importance": 0.13290353570419677,
+      "tag": "driver"
+    },
+    {
+      "feature": "base_cost_per_unit",
+      "importance": 0.12082732039471669,
+      "tag": "driver"
+    },
+    {
+      "feature": "base_yield_per_unit",
+      "importance": 0.06802942272320081,
+      "tag": "driver"
+    },
+    {
+      "feature": "min_area_acre",
+      "importance": 0.03565922506532401,
+      "tag": "driver"
+    },
+    {
+      "feature": "price_min",
+      "importance": 0.02278037764186523,
+      "tag": "driver"
+    },
+    {
+      "feature": "scales_with",
+      "importance": 0.013916973498365768,
+      "tag": "driver"
+    },
+    {
+      "feature": "duration_days",
+      "importance": 0.008091953691456516,
+      "tag": "control"
+    },
+    {
+      "feature": "capital_lock_in",
+      "importance": 0.0054364415210144835,
+      "tag": "control"
+    },
+    {
+      "feature": "budget_npr",
+      "importance": 0.00328211894288674,
+      "tag": "driver"
+    },
+    {
+      "feature": "water_dependency",
+      "importance": 0.0032153277475437418,
+      "tag": "control"
+    },
+    {
+      "feature": "price_volatility",
+      "importance": 0.0013193980792008972,
+      "tag": "control"
+    },
+    {
+      "feature": "zone",
+      "importance": 0.000654929594054247,
+      "tag": "control"
+    },
+    {
+      "feature": "season",
+      "importance": 0.00022785486867676712,
+      "tag": "control"
+    },
+    {
+      "feature": "water_source",
+      "importance": 1.2102994804512384e-05,
+      "tag": "control"
+    },
+    {
+      "feature": "budget_is_set",
+      "importance": 8.82533632162935e-06,
+      "tag": "driver"
+    },
+    {
+      "feature": "soil_type",
+      "importance": 1.487092818968977e-06,
+      "tag": "control"
+    }
+  ]
+}

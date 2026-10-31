@@ -1,0 +1,227 @@
+{
+  "generatedAt": "2026-09-24T18:40:25.838Z",
+  "modelsIncluded": [
+    "qwen2.5:7b-instruct",
+    "llama3.1:8b",
+    "claude-sonnet-5"
+  ],
+  "scenarios": 356,
+  "cropsCovered": 123,
+  "listEntries": {
+    "total": 5561,
+    "confirmedByMultipleModels": 435,
+    "singleSource": 4641,
+    "rejected": 3
+  },
+  "freeformAnswers": {
+    "total": 2136,
+    "withFactCheckWarning": 298
+  },
+  "perModel": {
+    "qwen2.5:7b-instruct": {
+      "listEntries": 1802,
+      "freeformAnswers": 712,
+      "rejected": 0
+    },
+    "llama3.1:8b": {
+      "listEntries": 1623,
+      "freeformAnswers": 712,
+      "rejected": 3
+    },
+    "claude-sonnet-5": {
+      "listEntries": 2136,
+      "freeformAnswers": 712,
+      "rejected": 0
+    }
+  },
+  "newFromLatestSourceCount": 1768,
+  "newFromLatestSourceSample": [
+    {
+      "crop": "Rice (Paddy)",
+      "zone": "terai",
+      "season": "kharif",
+      "type": "companionPlanting",
+      "name": "Azolla"
+    },
+    {
+      "crop": "Rice (Paddy)",
+      "zone": "terai",
+      "season": "kharif",
+      "type": "companionPlanting",
+      "name": "Sesbania (Dhaincha)"
+    },
+    {
+      "crop": "Rice (Paddy)",
+      "zone": "terai",
+      "season": "kharif",
+      "type": "companionPlanting",
+      "name": "Fish (rice-fish culture)"
+    },
+    {
+      "crop": "Rice (Paddy)",
+      "zone": "terai",
+      "season": "kharif",
+      "type": "pestDisease",
+      "name": "Stem borer"
+    },
+    {
+      "crop": "Rice (Paddy)",
+      "zone": "terai",
+      "season": "kharif",
+      "type": "pestDisease",
+      "name": "Rice blast (fungal)"
+    },
+    {
+      "crop": "Wheat",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "companionPlanting",
+      "name": "Mustard (Sarson)"
+    },
+    {
+      "crop": "Wheat",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "companionPlanting",
+      "name": "Chickpea"
+    },
+    {
+      "crop": "Wheat",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "companionPlanting",
+      "name": "Linseed"
+    },
+    {
+      "crop": "Wheat",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "pestDisease",
+      "name": "Wheat rust (yellow/brown)"
+    },
+    {
+      "crop": "Wheat",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "pestDisease",
+      "name": "Aphids"
+    },
+    {
+      "crop": "Wheat",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "pestDisease",
+      "name": "Termites"
+    },
+    {
+      "crop": "Wheat",
+      "zone": "hills",
+      "season": "rabi",
+      "type": "companionPlanting",
+      "name": "Field pea"
+    },
+    {
+      "crop": "Wheat",
+      "zone": "hills",
+      "season": "rabi",
+      "type": "companionPlanting",
+      "name": "Barley"
+    },
+    {
+      "crop": "Wheat",
+      "zone": "hills",
+      "season": "rabi",
+      "type": "pestDisease",
+      "name": "Termites"
+    },
+    {
+      "crop": "Wheat",
+      "zone": "hills",
+      "season": "rabi",
+      "type": "pestDisease",
+      "name": "Aphids"
+    },
+    {
+      "crop": "Maize (Makai)",
+      "zone": "terai",
+      "season": "kharif",
+      "type": "companionPlanting",
+      "name": "Black gram (Mas)"
+    },
+    {
+      "crop": "Maize (Makai)",
+      "zone": "terai",
+      "season": "kharif",
+      "type": "companionPlanting",
+      "name": "Pumpkin/squash"
+    },
+    {
+      "crop": "Maize (Makai)",
+      "zone": "terai",
+      "season": "kharif",
+      "type": "pestDisease",
+      "name": "Fall armyworm"
+    },
+    {
+      "crop": "Maize (Makai)",
+      "zone": "terai",
+      "season": "kharif",
+      "type": "pestDisease",
+      "name": "Stem borer"
+    },
+    {
+      "crop": "Maize (Makai)",
+      "zone": "terai",
+      "season": "kharif",
+      "type": "pestDisease",
+      "name": "Maize stalk rot"
+    },
+    {
+      "crop": "Maize (Makai)",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "companionPlanting",
+      "name": "Mustard"
+    },
+    {
+      "crop": "Maize (Makai)",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "companionPlanting",
+      "name": "Lentil"
+    },
+    {
+      "crop": "Maize (Makai)",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "companionPlanting",
+      "name": "Coriander"
+    },
+    {
+      "crop": "Maize (Makai)",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "pestDisease",
+      "name": "Stem borer"
+    },
+    {
+      "crop": "Maize (Makai)",
+      "zone": "terai",
+      "season": "rabi",
+      "type": "pestDisease",
+      "name": "Aphids"
+    }
+  ],
+  "probabilityBands": {
+    "list_entry": {
+      "medium": 1860,
+      "low": 3149,
+      "high": 67
+    },
+    "freeform_source": {
+      "low": 1452,
+      "medium": 659,
+      "very_low": 25
+    }
+  }
+}

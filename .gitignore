@@ -1,0 +1,39 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Python
+ml/.venv/
+__pycache__/
+*.pyc
+
+# Trained models (regenerate with the ml/train_*.py scripts)
+ml/models/*.joblib
+
+# Generated training data (regenerate with `npm run generate-dataset` in backend/)
+backend/data/training/*.csv
+
+# Runtime state written by the app
+backend/src/data/recommendationLog.json
+backend/src/data/savedBlueprints.json

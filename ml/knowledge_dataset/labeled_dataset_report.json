@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-09-24T18:39:09.244Z",
+  "methodology": {
+    "description": "Probabilistic scoring, not a trained/calibrated model -- see file header comment for full rationale and limitations.",
+    "selfReportBaseScores": {
+      "high": 0.6,
+      "medium": 0.45,
+      "low": 0.3,
+      "null": 0.45
+    },
+    "agreementBonusPerExtraSource": 0.15,
+    "factCheckMultipliers": {
+      "clean": 1,
+      "caveat": 0.85,
+      "rejected": 0.08
+    },
+    "knownLimitations": [
+      "Cross-model agreement bonus only applies to list_entry claims (exact-name matching); freeform_sentence claims have no automated agreement signal since models phrase the same idea differently.",
+      "The fact-checker only covers ONE class of error (nitrogen-fixing misattribution against a 17-crop table) -- a 'clean' factCheckStatus means 'not caught by this specific check', not 'verified correct'.",
+      "No real-world outcome data exists to calibrate these scores against -- probability values are a ranking/triage tool, not a measured accuracy rate."
+    ]
+  },
+  "totalRows": 12257,
+  "totalsByClaimType": {
+    "list_entry": 5078,
+    "freeform_sentence": 6859,
+    "corrected_fact": 320
+  },
+  "correctedFactsEmitted": 320,
+  "probabilityBandDistribution": {
+    "list_entry": {
+      "medium": 1859,
+      "low": 3149,
+      "high": 67,
+      "very_low": 3
+    },
+    "freeform_sentence": {
+      "low": 3311,
+      "medium": 3230,
+      "very_low": 318
+    },
+    "corrected_fact": {
+      "high": 320
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "rows": 453600,
+  "train_rows": 340200,
+  "test_rows": 113400,
+  "class_balance": {
+    "0": 0.8282186948853616,
+    "1": 0.17178130511463846
+  },
+  "logistic_regression_accuracy": 0.876331569664903,
+  "random_forest_accuracy": 0.9999823633156967,
+  "budget_feature_importance": 0.004681142717321702,
+  "top_feature_importances": [
+    {
+      "feature": "cat__enterprise_id_goat",
+      "importance": 0.04246091262277254
+    },
+    {
+      "feature": "cat__enterprise_id_buffalo",
+      "importance": 0.0422083096857227
+    },
+    {
+      "feature": "cat__enterprise_id_poultry_broiler",
+      "importance": 0.041833706387064386
+    },
+    {
+      "feature": "num__area_acre",
+      "importance": 0.03662112235894121
+    },
+    {
+      "feature": "cat__soil_type_clayey",
+      "importance": 0.03223796213665033
+    },
+    {
+      "feature": "cat__zone_high-hills",
+      "importance": 0.02923213520672436
+    },
+    {
+      "feature": "cat__season_rabi",
+      "importance": 0.027305283720691936
+    },
+    {
+      "feature": "cat__season_kharif",
+      "importance": 0.0244241600135798
+    },
+    {
+      "feature": "cat__season_zaid",
+      "importance": 0.023749672303304718
+    },
+    {
+      "feature": "cat__water_source_irrigated",
+      "importance": 0.021468450929939046
+    },
+    {
+      "feature": "cat__water_source_rainfed",
+      "importance": 0.021289231608638336
+    },
+    {
+      "feature": "cat__zone_terai",
+      "importance": 0.02061246161076575
+    },
+    {
+      "feature": "cat__zone_hills",
+      "importance": 0.01901039673713187
+    },
+    {
+      "feature": "cat__enterprise_id_stylo",
+      "importance": 0.01857280583534398
+    },
+    {
+      "feature": "cat__enterprise_id_maize",
+      "importance": 0.018561627357262467
+    }
+  ]
+}

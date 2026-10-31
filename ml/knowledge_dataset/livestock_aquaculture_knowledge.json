@@ -1,0 +1,143 @@
+{
+  "generatedBy": "claude-sonnet-5",
+  "generatedAt": "2026-09-25T00:00:00.000Z",
+  "purpose": "Practice-level knowledge (feed, health, integration, cycle management) for gram's 3 existing livestock enterprises (goat, buffalo, poultry_broiler) plus fish/aquaculture, which is NOT currently an enterprise in enterprises.json. This is agronomic/practice knowledge only -- it deliberately carries NO cost/price/yield figures, because this project's standing rule (see enterprises.json's own sources fields) is that every economic number must be a real cited figure or explicitly flagged as an estimate, and no such research has been done for fish farming yet. Treat this file as a first pass worth reviewing, not yet wired into the live app.",
+  "disclaimer": "AI-generated (single model, not cross-validated against Qwen/Llama the way the crop dataset is), Nepal-focused, fact-checked only informally by the author's own agronomic knowledge -- not sourced the way enterprises.json's cited figures are. Treat as a starting point to verify locally, same trust level as the rest of the growing-tips pipeline.",
+
+  "goat": {
+    "note": "Already a real gram enterprise (see enterprises.json) across all 3 zones. This adds practice knowledge beyond the app's economics.",
+    "zones": {
+      "terai": {
+        "feed_management": "Terai goat-keeping is mostly stall-fed or tethered grazing on crop residues (rice/wheat straw, maize stover), tree fodder (leaves from local species like Ipil-Ipil/Leucaena where available), and purchased concentrate for finishing animals close to sale. Straw alone is low in protein, so mixing in legume fodder or a small grain/bran ration before sale noticeably improves weight gain. confidence: medium",
+        "health_management": "PPR (Peste des Petits Ruminants) and internal parasites (worms) are the two most consequential health risks; a basic deworming schedule (roughly every 3 months) and PPR vaccination where available are widely recommended low-cost interventions. Foot rot is also a real risk in the wetter Terai monsoon if housing isn't kept dry. confidence: medium",
+        "integration_practices": "Goat manure is a valued, relatively fast-composting input for vegetable plots -- many Terai smallholders route bedding/manure directly into compost pits feeding their crop fields, effectively closing a nutrient loop between the livestock and cropping side of the same farm. confidence: medium",
+        "cycle_management": "Goats breed roughly twice in a two-year cycle (or annually with good management) and kids are typically ready for sale/finishing within 8-12 months, so a household can stagger breeding to have market-ready animals across multiple points in the year rather than one single harvest window like most annual crops. confidence: low"
+      },
+      "hills": {
+        "feed_management": "Hill goat-keeping relies heavily on tree fodder and grazing on terrace edges/common land, since dedicated fodder plots compete with food-crop land on steep terrain; households with fewer fodder trees often struggle more in the dry pre-monsoon months. confidence: medium",
+        "health_management": "Similar PPR/parasite risk profile as the Terai, with the added complication that veterinary access is often farther away in hill areas, making preventive care (deworming, basic vaccination) more valuable relative to treating disease after the fact. confidence: low",
+        "integration_practices": "Hill households commonly route goat manure to terrace vegetable or maize plots, since transporting purchased fertilizer up to terraces is costly -- goat manure is one of the more accessible nutrient sources for hill cropping. confidence: medium",
+        "cycle_management": "Similar breeding cadence to the Terai; hill farmers sometimes time kidding to avoid the most labor-constrained periods of the main cropping calendar (e.g., avoiding kidding right at maize harvest). confidence: low"
+      },
+      "high-hills": {
+        "feed_management": "High-hill goat-keeping (along with sheep) is more grazing/transhumance-based given limited arable land at this elevation; winter feed scarcity is a real constraint, and some households store dried fodder (hay) for the coldest months. confidence: low",
+        "health_management": "Cold stress and respiratory issues are a more specific concern at this elevation alongside the general PPR/parasite risks; adequate shelter matters more here than in warmer zones. confidence: low",
+        "integration_practices": "Manure is a particularly valuable input at this elevation given how limited purchased fertilizer access is; it is commonly applied directly to the small cropped plots near the homestead. confidence: low",
+        "cycle_management": "Breeding is often timed so kidding avoids the harshest winter months, given the added cold-stress risk to newborns at this elevation. confidence: low"
+      }
+    }
+  },
+
+  "buffalo": {
+    "note": "Already a real gram enterprise (dairy, per animal) across all 3 zones.",
+    "zones": {
+      "terai": {
+        "feed_management": "Terai dairy buffalo are typically fed a mix of crop residues (rice straw, wheat straw), cultivated fodder (napier grass, berseem in season), and concentrate feed for lactating animals; napier grass is a widely grown dedicated fodder crop specifically to support dairy buffalo/cattle in this zone. confidence: medium",
+        "health_management": "Mastitis (udder infection) is the most consequential dairy-specific health risk, managed through clean milking practices and hygiene; foot-and-mouth disease is a broader regional risk requiring vaccination where accessible. confidence: medium",
+        "integration_practices": "Buffalo dung is a major biogas feedstock in Nepal -- many Terai households with a few buffalo run a household biogas digester, using the dung for cooking fuel and returning the digested slurry (a nutrient-rich, partially stabilized manure) to crop fields, a well-documented and fairly widespread Nepal practice. confidence: high",
+        "cycle_management": "Dairy buffalo have a roughly year-round production cycle once in milk (unlike a seasonal crop), with lactation and dry periods to manage around calving, so the 'season' framing used for crops doesn't map directly onto buffalo management the way it does for an annual crop. confidence: medium"
+      },
+      "hills": {
+        "feed_management": "Hill buffalo rely more on stall-feeding with cut-and-carry fodder (grasses and tree leaves carried to the animal, since free grazing is less feasible on terraced land) alongside crop residues from maize and millet. confidence: medium",
+        "health_management": "Similar core disease risks as the Terai (mastitis, FMD), with veterinary access again more limited in hill areas, making preventive hygiene practices relatively more valuable. confidence: low",
+        "integration_practices": "Biogas-from-dung is also practiced in the hills where terrain and household scale allow, with the slurry applied to nearby terraced cropland -- the same nutrient loop as in the Terai, just constrained by hillier terrain for digester placement. confidence: medium",
+        "cycle_management": "Similar year-round dairy cycle as the Terai; hill households sometimes plan calving to avoid the most labor-intensive cropping periods. confidence: low"
+      },
+      "high-hills": {
+        "feed_management": "Buffalo are less common at the highest elevations compared to cattle/yak-hybrids better suited to cold and altitude; where buffalo are kept, winter feed scarcity is the main constraint, similar to goats at this elevation. confidence: low",
+        "health_management": "Cold stress is an added concern alongside the general disease risks present at lower elevations. confidence: low",
+        "integration_practices": "Manure is a valuable, if smaller-scale, nutrient input for the limited cropped land near high-hill homesteads. confidence: low",
+        "cycle_management": "Calving timing considerations similar to goats at this elevation -- avoiding the coldest months where possible. confidence: low"
+      }
+    }
+  },
+
+  "poultry_broiler": {
+    "note": "Already a real gram enterprise (fast cash-cycle, ~45 days/batch, see enterprises.json's cited economics). This adds practice knowledge.",
+    "zones": {
+      "terai": {
+        "feed_management": "Feed (commercial or home-mixed maize/soybean-based ration) is consistently the dominant cost driver, as reflected in enterprises.json's own cited sourcing (feed reported as 65-80% of total broiler cost) -- practice-wise, ensuring consistent feed and water access through the birds' rapid ~45-day growth window matters more than any single input choice. confidence: high",
+        "health_management": "Heat stress in Terai summers and basic biosecurity (limiting outside visitor/vehicle contact with the shed, clean water, controlling rodents) are the two most commonly cited practical risk-management priorities for broiler batches at this scale. confidence: medium",
+        "integration_practices": "Poultry litter (bedding + droppings) is a fast, nutrient-rich compost input for vegetable plots, and is sometimes used directly (if well composted first, since fresh poultry manure can burn young plants) rather than left as pure waste. confidence: medium",
+        "cycle_management": "The ~45-day cycle means a Terai household can run several batches per year -- the fastest cash-cycle enterprise in gram's current dataset -- so batches are often timed to avoid the hottest peak-summer weeks, which increase heat-stress mortality risk. confidence: medium"
+      },
+      "hills": {
+        "feed_management": "Feed cost is still the dominant driver; hill households may face higher effective feed cost due to transport, since maize/soybean-based commercial feed often has to be carried up from lower-elevation supply points. confidence: low",
+        "health_management": "Cooler hill temperatures reduce heat-stress risk relative to the Terai, but cold stress in young chicks (especially during brooding) becomes a more relevant concern instead. confidence: low",
+        "integration_practices": "Same poultry-litter-to-compost loop as the Terai, feeding hill vegetable/maize plots. confidence: low",
+        "cycle_management": "Similar rapid batch cycle; timing mainly needs to account for cold-stress risk during brooding in cooler months rather than heat stress. confidence: low"
+      },
+      "high-hills": {
+        "feed_management": "Feed transport cost and availability are a bigger constraint at this elevation; broiler-keeping is less common here than in the lower two zones for exactly that reason. confidence: low",
+        "health_management": "Cold stress during brooding is the dominant practical concern, requiring more attention to shed insulation/heating than in warmer zones. confidence: low",
+        "integration_practices": "Same litter-to-compost nutrient loop where practiced, feeding the limited cropped land near the homestead. confidence: low",
+        "cycle_management": "Batches may be timed to avoid the coldest winter months given the added brooding risk. confidence: low"
+      }
+    }
+  },
+
+  "fish_aquaculture": {
+    "note": "NOT currently a gram enterprise -- no entry exists in enterprises.json, so this has no live economics and cannot yet be recommended by the app. This is knowledge-gathering only, flagged explicitly per this project's data-honesty standard: adding fish as a real recommendable enterprise would need actual Nepal cost/yield/price research (pond construction cost, feed cost, fingerling cost, market price per kg by species) before it could be trusted the same way the existing 126 enterprises are.",
+    "zones": {
+      "terai": {
+        "feed_management": "Nepal's dominant small-pond aquaculture system is carp polyculture -- typically a mix of Indian major carps (rohu, catla, mrigal) and sometimes exotic carps (silver carp, grass carp, common carp) stocked together at different water-column feeding niches (surface, column, bottom) to use pond productivity efficiently without competing for the same feed. Feeding is a mix of pond-natural productivity (encouraged via manure/fertilizer inputs that grow plankton) and supplementary feed (rice bran, mustard oil cake, or commercial pellet feed). confidence: medium",
+        "health_management": "Water quality management (adequate dissolved oxygen, avoiding overstocking, managing organic load from manure inputs) is the primary 'health' lever in pond aquaculture rather than disease treatment per se; poor water quality is the most common cause of fish stress/mortality in small ponds. confidence: medium",
+        "integration_practices": "Rice-fish integrated culture (growing fish directly in flooded rice paddies, or in a pond-dike system adjacent to paddy) is a real, documented practice in Nepal's Terai, giving two harvests (rice and fish) from largely the same water and land. Poultry-fish and livestock-fish integration (siting a poultry shed or livestock pen over or beside a pond so droppings fertilize the water, boosting natural fish food production) is also a well-documented South Asian smallholder practice, though it requires careful management to avoid overloading the pond with organic matter. confidence: medium",
+        "cycle_management": "A typical carp grow-out cycle runs roughly 8-12 months to reach marketable size, so unlike the 45-day poultry cycle, pond aquaculture is a much slower-turnover enterprise more comparable in cycle length to an annual crop than to poultry. confidence: low"
+      },
+      "hills": {
+        "feed_management": "Hill aquaculture is less common than Terai pond culture due to limited flat land and water availability, but where practiced (e.g., smaller hill ponds fed by irrigation channels or springs), the same carp-polyculture, manure-plus-supplementary-feed approach applies at a smaller scale. confidence: low",
+        "health_management": "Same water-quality-first management principle as the Terai, with the added consideration that cooler hill water temperatures slow fish growth compared to the warmer Terai. confidence: low",
+        "integration_practices": "Where hill ponds exist, the same poultry/livestock-over-pond nutrient integration is technically possible, though it is a less established practice in the hills than in the Terai given the scarcity of suitable pond sites. confidence: low",
+        "cycle_management": "Grow-out likely takes longer than the Terai's 8-12 months given cooler water temperatures slowing fish metabolism, though this is not a well-documented Nepal-specific figure. confidence: low"
+      },
+      "high-hills": {
+        "feed_management": "Cold-water species (e.g., trout) rather than warm-water carp are the realistic option at high elevation if aquaculture is attempted at all; trout farming exists in parts of Nepal's high hills/mountains but is a specialized, higher-input system very different from Terai carp ponds. confidence: low",
+        "health_management": "Cold-water fish farming has its own distinct water-quality and disease considerations (e.g., needing consistently cold, well-oxygenated flowing water) that don't transfer from the carp-pond knowledge above. confidence: low",
+        "integration_practices": "Not well documented for this elevation in the sources this knowledge draws on; likely limited given how specialized cold-water aquaculture infrastructure is. confidence: low",
+        "cycle_management": "Trout grow-out cycles and management are distinct from carp and not covered with confidence here. confidence: low"
+      }
+    }
+  },
+
+  "cross_enterprise_integration_practices": {
+    "note": "Nepal-relevant whole-farm nutrient/residue loops that connect crops and livestock -- directly relevant to the 'residuals from crops or wastes from animals can be reused' question. These are the specific mechanisms behind the abstract idea of a 'regenerative' or 'circular' smallholder farm.",
+    "practices": [
+      {
+        "name": "Crop residue -> livestock feed -> manure -> compost -> crop field",
+        "description": "Rice/wheat straw and maize stover, which would otherwise be waste or burned, are a real and widely used low-cost feed component for goats and buffalo (see feed_management notes above). The resulting dung is then composted or biogas-digested and returned to cropland -- closing a loop where the crop side feeds the livestock side, which in turn feeds the crop side's soil fertility. This is the single most broadly applicable integration pattern for a mixed Nepal smallholder farm and doesn't require any specialized infrastructure beyond basic composting.",
+        "confidence": "high"
+      },
+      {
+        "name": "Livestock dung -> household biogas -> cooking fuel + slurry -> crop field",
+        "description": "A well-documented, fairly widespread Nepal practice (particularly with buffalo/cattle dung, see buffalo's integration_practices above): a household-scale biogas digester converts dung into cooking gas, and the leftover slurry -- now partially stabilized and with some pathogens reduced compared to raw dung -- is applied to cropland as a nutrient input. This is a genuine two-output loop (fuel + fertilizer) from one waste stream.",
+        "confidence": "high"
+      },
+      {
+        "name": "Rice-fish (or poultry/livestock-over-pond) integration",
+        "description": "Documented in Nepal's Terai (see fish_aquaculture's integration_practices above): flooded rice paddies or adjacent ponds double as fish habitat, and siting poultry/livestock near a pond lets droppings fertilize pond water to boost natural fish food. This is a genuine multi-output system from the same land/water footprint, though it needs careful management (overloading a pond with manure can crash water quality rather than help it).",
+        "confidence": "medium"
+      },
+      {
+        "name": "Azolla as a nitrogen-fixing feed/green-manure double-use crop",
+        "description": "Azolla, the floating nitrogen-fixing fern already noted in rice's companion_planting entry above, has a documented dual use beyond green manure: it is also a real, protein-rich supplementary feed for poultry, fish, and livestock in South Asian smallholder systems. A farm growing azolla in a small dedicated tank or rice-paddy margin can use it both to enrich soil nitrogen when ploughed in AND as a feed supplement, making it one of the more efficient small-scale integration inputs available.",
+        "confidence": "medium"
+      },
+      {
+        "name": "Legume crop residue and green manure as the cross-cutting nitrogen bridge",
+        "description": "Every legume covered in the crop-side dataset (lentil, mung bean, chickpea, cowpea, soybean, etc.) leaves nitrogen-enriched residue behind; this is the same mechanism already captured in each crop's rotation_sequence entries, but it's worth stating explicitly as a whole-farm principle: deliberately sequencing a legume before a heavy-feeding crop (potato, maize, brassicas, sugarcane, banana) is the single cheapest soil-fertility lever available to a smallholder without purchased inputs, and it recurs constantly across this dataset because it is genuinely the dominant real practice, not an artifact of how the questions were asked.",
+        "confidence": "high"
+      }
+    ]
+  },
+
+  "regional_evolution_notes": {
+    "note": "Explicitly speculative, reasoned forward-looking observations -- NOT facts, not sourced, offered because the user asked what 'evolution' might be guessed from this knowledge base. Confidence is capped at medium/low throughout this section deliberately.",
+    "notes": [
+      { "observation": "Rural labor scarcity from continued out-migration (a well-documented, ongoing Nepal demographic trend) likely favors lower-labor-intensity enterprises over time -- goat-keeping and poultry batches need less daily labor than intensive vegetable cropping or paddy transplanting, which may shift smallholder enterprise mix toward livestock and away from labor-intensive crops in areas with the most out-migration.", "confidence": "low" },
+      { "observation": "Climate variability (shifting monsoon onset/intensity, documented as an ongoing concern in Nepal agriculture policy discussion) plausibly increases the relative value of shorter-cycle, more schedule-flexible enterprises (poultry's 45-day batches, zaid-season short legumes) over long-duration, rigid-timing crops, since shorter cycles let a farmer adapt more quickly if a season starts badly.", "confidence": "low" },
+      { "observation": "Growing urban demand for poultry, fish, and vegetables (a general South Asian urbanization pattern, not a Nepal-specific citation) plausibly makes peri-urban Terai land increasingly favor these higher-value, higher-turnover enterprises over traditional cereal staples, though this project's own price data only covers current conditions, not this kind of trend.", "confidence": "low" },
+      { "observation": "If fish/aquaculture were properly researched and added as a real gram enterprise, rice-fish integration specifically would be a natural fit to highlight given it uses land already in the dataset (rice) rather than requiring new dedicated pond land -- worth prioritizing over standalone pond aquaculture if this area is developed further.", "confidence": "low" }
+    ]
+  }
+}

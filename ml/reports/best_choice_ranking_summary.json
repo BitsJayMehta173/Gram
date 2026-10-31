@@ -1,0 +1,168 @@
+{
+  "rows": 453600,
+  "scenarios": 3600,
+  "train_rows": 340200,
+  "test_rows": 113400,
+  "train_scenarios": 2700,
+  "test_scenarios": 900,
+  "class_balance": {
+    "0": 0.9920634920634921,
+    "1": 0.007936507936507936
+  },
+  "logistic_regression": {
+    "report": {
+      "not_best": {
+        "precision": 0.9981866666666667,
+        "recall": 0.9981866666666667,
+        "f1-score": 0.9981866666666667,
+        "support": 112500.0
+      },
+      "best": {
+        "precision": 0.7733333333333333,
+        "recall": 0.7733333333333333,
+        "f1-score": 0.7733333333333333,
+        "support": 900.0
+      },
+      "accuracy": 0.9964021164021164,
+      "macro avg": {
+        "precision": 0.88576,
+        "recall": 0.88576,
+        "f1-score": 0.88576,
+        "support": 113400.0
+      },
+      "weighted avg": {
+        "precision": 0.9964021164021164,
+        "recall": 0.9964021164021164,
+        "f1-score": 0.9964021164021164,
+        "support": 113400.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        112296,
+        204
+      ],
+      [
+        204,
+        696
+      ]
+    ],
+    "top1_group_accuracy": 0.7733333333333333,
+    "top3_group_accuracy": 0.9911111111111112
+  },
+  "random_forest": {
+    "report": {
+      "not_best": {
+        "precision": 0.9997955501035584,
+        "recall": 0.9997688888888889,
+        "f1-score": 0.9997822193184798,
+        "support": 112500.0
+      },
+      "best": {
+        "precision": 0.9712070874861573,
+        "recall": 0.9744444444444444,
+        "f1-score": 0.9728230726566833,
+        "support": 900.0
+      },
+      "accuracy": 0.9995679012345678,
+      "macro avg": {
+        "precision": 0.9855013187948578,
+        "recall": 0.9871066666666667,
+        "f1-score": 0.9863026459875815,
+        "support": 113400.0
+      },
+      "weighted avg": {
+        "precision": 0.9995686575431029,
+        "recall": 0.9995679012345678,
+        "f1-score": 0.9995682578370368,
+        "support": 113400.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        112474,
+        26
+      ],
+      [
+        23,
+        877
+      ]
+    ],
+    "top1_group_accuracy": 0.9722222222222222,
+    "top3_group_accuracy": 1.0
+  },
+  "feature_importances_grouped": [
+    {
+      "feature": "enterprise_id",
+      "importance": 0.16336013175315622
+    },
+    {
+      "feature": "season",
+      "importance": 0.15364437627607372
+    },
+    {
+      "feature": "base_yield_per_unit",
+      "importance": 0.13218989506780884
+    },
+    {
+      "feature": "base_cost_per_unit",
+      "importance": 0.11013286592395177
+    },
+    {
+      "feature": "scales_with",
+      "importance": 0.08315009773021495
+    },
+    {
+      "feature": "zone",
+      "importance": 0.0687495475448136
+    },
+    {
+      "feature": "area_acre",
+      "importance": 0.06785211462033976
+    },
+    {
+      "feature": "price_max",
+      "importance": 0.045643623975668825
+    },
+    {
+      "feature": "price_min",
+      "importance": 0.03041768211561885
+    },
+    {
+      "feature": "min_area_acre",
+      "importance": 0.03030836617854463
+    },
+    {
+      "feature": "soil_type",
+      "importance": 0.02582735672977783
+    },
+    {
+      "feature": "budget_npr",
+      "importance": 0.02247920086849806
+    },
+    {
+      "feature": "water_source",
+      "importance": 0.020042782013583893
+    },
+    {
+      "feature": "duration_days",
+      "importance": 0.019920327890102594
+    },
+    {
+      "feature": "capital_lock_in",
+      "importance": 0.008923470671934799
+    },
+    {
+      "feature": "price_volatility",
+      "importance": 0.008909626079311074
+    },
+    {
+      "feature": "water_dependency",
+      "importance": 0.004772926237349267
+    },
+    {
+      "feature": "budget_is_set",
+      "importance": 0.0036756083232513575
+    }
+  ]
+}

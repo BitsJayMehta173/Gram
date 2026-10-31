@@ -1,0 +1,103 @@
+{
+  "generatedBy": "claude-sonnet-5",
+  "generatedAt": "2026-09-25T00:00:00.000Z",
+  "purpose": "Worked case studies showing full-year area-division planning evolve from a naive v1 plan to a v2 plan that fixes concrete, named mistakes -- crop-livestock integration, residue/waste reuse, legume nitrogen rotation, and diversification. Each scenario keeps an explicit evolution_log so the reasoning behind every change is visible and auditable, not just asserted. Grounded in gram's real zone/soil/water/season/budget model and the crop-level knowledge already generated in this dataset (see knowledge_dataset_claude-sonnet-5.jsonl and livestock_aquaculture_knowledge.json) -- every named practice traces back to an entry in one of those two files.",
+  "disclaimer": "These are illustrative reasoning exercises, not a substitute for gram's own rule-based recommendation engine (scoring.js/fieldLayouts.js), which uses real cited economics. Area/budget splits here are round numbers for illustration, not an optimized output.",
+
+  "scenarios": [
+    {
+      "id": "terai-smallholder-diversification",
+      "setup": {
+        "location": "Terai (e.g. Sunsari district pilot area)",
+        "areaAcre": 0.5,
+        "soilType": "alluvial",
+        "waterSource": "irrigated",
+        "budgetNPR": 100000,
+        "existingAssets": "2 goats, already kept for household milk/meat and occasional sale",
+        "goal": "Year-round income plus household food security, on a small irrigated plot"
+      },
+      "v1_naive_plan": {
+        "areaDivision": [
+          { "season": "kharif", "allocation": "Rice, full 0.5 acre" },
+          { "season": "rabi", "allocation": "Wheat, full 0.5 acre" },
+          { "season": "zaid", "allocation": "Fallow (unused)" }
+        ],
+        "livestock": "2 goats fed on purchased fodder; manure accumulates near the shed without a defined reuse path",
+        "budgetUse": "Nearly all budget spent on rice + wheat seed/inputs; goats run as a separate, disconnected income stream"
+      },
+      "critique": [
+        "Rice -> wheat -> fallow has no legume break crop; the rice-wheat cereal-only cycle is a well-documented Nepal Terai concern for steadily depleting soil nitrogen, meaning fertilizer cost creeps up year over year just to hold yield steady.",
+        "The zaid window (Apr-May) is left completely fallow -- wasted land-time when a short-duration legume could both earn income and fix nitrogen ahead of the next rice crop.",
+        "Goat manure is not routed anywhere specific -- a free nutrient input goes to waste while the household presumably still buys full-price inputs for rice and wheat.",
+        "The whole plot rides on two monocrops; if either rice or wheat has a bad price year (gram's own risk model tracks priceVolatility for exactly this reason), there's no diversification cushion.",
+        "No use of any of the companion-planting or intercropping options the crop-level dataset already documents as viable for this exact zone/season combination."
+      ],
+      "v2_evolved_plan": {
+        "areaDivision": [
+          { "season": "kharif", "allocation": "Rice on 0.4 acre + a diversification block of Okra or Bottle Gourd on 0.1 acre (both flagged low-risk/high-ROI in gram's own recommendation data)" },
+          { "season": "rabi", "allocation": "Wheat on 0.3 acre + Lentil on 0.2 acre (nitrogen-fixing break crop, replacing part of the wheat monocrop)" },
+          { "season": "zaid", "allocation": "Mung bean, full 0.5 acre (fills the previously fallow window)" }
+        ],
+        "livestock": "Same 2 goats, but manure + bedding now explicitly routed to a compost pit feeding the vegetable and lentil blocks; a portion of rice/wheat stubble diverted to goat feed instead of 100% purchased fodder",
+        "budgetUse": "Fertilizer cost reduced by the legume rotation and captured manure; fodder cost reduced by using stubble; savings redirected toward the vegetable diversification block"
+      },
+      "evolution_log": [
+        { "change": "Added mung bean in the zaid window (previously fallow)", "reason": "Zaid land-time was unused; mung bean is a real short-duration legume that earns income AND fixes nitrogen ahead of the next rice crop -- a documented gap in the naive rice-wheat-fallow pattern." },
+        { "change": "Replaced part of the wheat block with lentil", "reason": "Wheat alone never returns nitrogen to the soil; lentil specifically breaks the rice-wheat cereal-only cycle -- this is the exact fix the dataset's own rice and wheat rotation_sequence entries recommend." },
+        { "change": "Diverted a small block to a companion vegetable (okra/bottle gourd)", "reason": "All-monocrop exposure to one crop's price swing is a real risk category in gram's own risk model; a small diversification block reduces that exposure without abandoning the main rice/wheat income." },
+        { "change": "Routed goat manure to compost feeding the new vegetable/lentil blocks", "reason": "v1 had goats and crops as two disconnected income streams; this is the single cheapest real fertility lever a smallholder has, and it was sitting unused." },
+        { "change": "Diverted a portion of rice/wheat stubble to goat feed", "reason": "v1 implicitly assumed goats are fed entirely on purchased fodder; using residue that would otherwise be waste (or burned) cuts a real recurring cost, closing the nutrient loop in the other direction too." }
+      ]
+    },
+
+    {
+      "id": "midhills-terrace-integration",
+      "setup": {
+        "location": "Mid-Hills terrace farm",
+        "areaAcre": 1.0,
+        "soilType": "loamy",
+        "waterSource": "rainfed",
+        "budgetNPR": 60000,
+        "existingAssets": "1 buffalo, kept for household milk; dung currently left in an open pile near the shed",
+        "goal": "Move beyond pure subsistence cereal cropping toward a more resilient, lower-cost-input terrace farm"
+      },
+      "v1_naive_plan": {
+        "areaDivision": [
+          { "season": "kharif", "allocation": "Maize, full 1 acre" },
+          { "season": "rabi", "allocation": "Wheat, full 1 acre" }
+        ],
+        "livestock": "1 buffalo for household milk; dung left in an open pile, no biogas, no defined application schedule to the fields",
+        "budgetUse": "Mostly maize/wheat seed plus a small, irregular amount of manure; nothing set aside for infrastructure or diversification"
+      },
+      "critique": [
+        "Maize -> wheat has no legume break, same core problem as the Terai scenario -- and hill terraces are documented as relying on manure even more heavily than the Terai (since purchased fertilizer is costlier to transport up), so wasting nutrient input here is even more costly.",
+        "An open dung pile near the shed loses nutrients to runoff and volatilization before it ever reaches the field, and wastes a well-documented Nepal hill practice: household biogas, which would also cut the household's cooking-fuel cost.",
+        "A rainfed, single-crop-per-season terrace is high risk if that year's monsoon is poor, with no water-independent diversification.",
+        "The naive plan misses the single highest-confidence, most specifically-documented Nepal mid-hills practice in this whole knowledge base: maize-soybean (or maize-black gram) intercropping, a real, common, high-confidence hill practice -- a free extra harvest and nitrogen benefit from the same land that v1 leaves on the table entirely."
+      ],
+      "v2_evolved_plan": {
+        "areaDivision": [
+          { "season": "kharif", "allocation": "Maize intercropped with Soybean, full 1 acre (real, high-confidence documented mid-hills practice -- same maize harvest, plus a soybean harvest, plus nitrogen fixation feeding the next wheat crop)" },
+          { "season": "rabi", "allocation": "Wheat on 0.7 acre + Lentil on 0.3 acre (legume break crop)" }
+        ],
+        "livestock": "Same 1 buffalo, dung now captured via a small household biogas digester instead of an open pile -- gas for cooking, and the leftover slurry applied to the wheat/lentil terrace as a nutrient-preserved input",
+        "budgetUse": "Legume rotation and better-preserved manure reduce ongoing fertilizer need; a portion of the original recurring fertilizer/fodder budget reallocated toward the one-time biogas construction cost, which then keeps paying back every season afterward"
+      },
+      "evolution_log": [
+        { "change": "Maize monocrop -> maize+soybean intercrop", "reason": "This is the single highest-confidence, most specifically-documented Nepal mid-hills practice in the dataset, and the naive plan missed it entirely -- a free additional harvest plus a nitrogen benefit from the same land." },
+        { "change": "Added lentil break crop in rabi", "reason": "Same nitrogen-restoration logic as the Terai scenario -- hill terraces are even more reliant on manure than the Terai per this dataset's own soil_amendment notes, so skipping a free nitrogen source is costlier here." },
+        { "change": "Open dung pile -> household biogas digester", "reason": "A well-documented, high-confidence Nepal practice the naive plan didn't use at all -- it recovers cooking fuel AND preserves more nutrient value in the slurry than an open pile that loses nutrients to runoff and volatilization." },
+        { "change": "Reallocated part of the recurring fertilizer/fodder budget toward the one-time biogas construction cost", "reason": "The legume rotation and better-preserved manure reduce ongoing fertilizer need, freeing budget for a one-time infrastructure investment that pays back over many future seasons rather than being spent again every season." }
+      ]
+    }
+  ],
+
+  "cross_scenario_patterns": {
+    "note": "Both scenarios independently converge on the same three fixes -- worth stating explicitly, since a repeated pattern across unrelated starting points is a stronger signal than either scenario alone.",
+    "patterns": [
+      "A legume break crop (lentil in both cases) is the single most consistently missed, highest-value fix in a naive cereal-only rotation -- it shows up as the top correction in both the Terai and Mid-Hills scenario despite very different starting conditions.",
+      "Livestock and cropping were planned as two disconnected income streams in both naive v1 plans; the highest-leverage single change in each v2 was explicitly closing that loop (compost in the Terai case, biogas in the hill case) rather than adding any new enterprise.",
+      "Neither naive plan used any documented companion-planting/intercropping option, even where one existed with high confidence (maize+soybean in the hills) -- suggesting that a 'what am I missing' pass against the crop-level companion_planting data is worth doing for any farm plan, not just these two."
+    ]
+  }
+}
